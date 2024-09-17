@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:home_decor/screens/filter.dart';
-import 'package:home_decor/screens/search.dart';
+import 'package:home_decor/screens/user_reviews.dart';
 
 void main() => runApp(const MyApp());
 
@@ -12,7 +11,12 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Material App',
       // home: SearchScreen(),
-      home: FilterScreen(),
+      // home: FilterScreen(),
+      // TODO: Tasks-week-2
+      // home: CategoriesScreen(),
+      // home: SubCategory(),
+      // home: ProductScreen(),
+      home: UserReviews(),
     );
   }
 }
