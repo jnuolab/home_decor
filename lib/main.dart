@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:home_decor/screens/filter.dart';
-import 'package:home_decor/screens/search.dart';
 
 void main() => runApp(const MyApp());
 

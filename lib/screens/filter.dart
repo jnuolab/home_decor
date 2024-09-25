@@ -11,7 +11,7 @@ class FilterScreen extends StatefulWidget {
 class _FilterScreenState extends State<FilterScreen> {
   final List<String> _items = ['Living Room', 'Decorative Light', 'Bed Room'];
   double value = 1;
-  int? _sliding = 0;
+  // int? _sliding = 0;
   final List _categories = [
     'Bedroom',
     'Living Room',
@@ -29,7 +29,7 @@ class _FilterScreenState extends State<FilterScreen> {
     'Decor',
     'Nightstand'
   ];
-  final List _colors = [
+  final List _colors = const [
     Color.fromRGBO(179, 161, 254, 1),
     Color.fromRGBO(160, 192, 254, 1),
     Color.fromRGBO(90, 189, 211, 1),
@@ -86,7 +86,7 @@ class _FilterScreenState extends State<FilterScreen> {
                     divisions: 10,
                     onChanged: (newRating) {
                       setState(() {
-                        print(newRating);
+                        // print(newRating);
                         value = newRating;
                       });
                     },
@@ -147,7 +147,7 @@ class _FilterScreenState extends State<FilterScreen> {
                   const SizedBox(height: 20),
                   Center(
                     child: MaterialButton(
-                      padding: EdgeInsets.symmetric(horizontal: 50),
+                      padding: const EdgeInsets.symmetric(horizontal: 50),
                       onPressed: () {},
                       color: const Color.fromRGBO(243, 182, 163, 1),
                       child: const Text(
@@ -213,7 +213,7 @@ class _FilterScreenState extends State<FilterScreen> {
                           _items[index],
                           style: const TextStyle(
                             fontSize: 18,
-                            color: const Color.fromRGBO(243, 182, 163, .5),
+                            color: Color.fromRGBO(243, 182, 163, .5),
                           ),
                         ),
                         const SizedBox(width: 20),
