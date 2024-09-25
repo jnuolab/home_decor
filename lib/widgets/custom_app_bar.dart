@@ -11,16 +11,14 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        SizedBox(
+    return AppBar(
+        leading: SizedBox(
           width: 20,
           child: SvgPicture.asset(
             'assets/svgs/arrow_back.svg',
           ),
         ),
-        Text(
+        title: Text(
           title,
           style: const TextStyle(
             fontSize: 20,
@@ -28,19 +26,19 @@ class CustomAppBar extends StatelessWidget {
             color: AppColors.mainColor,
           ),
         ),
-        Container(
-          width: 30,
-          height: 30,
-          padding: const EdgeInsets.all(5),
-          decoration: BoxDecoration(
-              color: AppColors.mainColor,
-              borderRadius: BorderRadius.circular(30)),
-          child: SvgPicture.asset(
-            'assets/svgs/search.svg',
-            fit: BoxFit.fill,
+        actions: [
+          Container(
+            width: 30,
+            height: 30,
+            padding: const EdgeInsets.all(5),
+            decoration: BoxDecoration(
+                color: AppColors.mainColor,
+                borderRadius: BorderRadius.circular(30)),
+            child: SvgPicture.asset(
+              'assets/svgs/search.svg',
+              fit: BoxFit.fill,
+            ),
           ),
-        ),
-      ],
-    );
+        ]);
   }
 }

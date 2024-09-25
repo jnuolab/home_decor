@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:home_decor/screens/user_reviews.dart';
+import 'package:home_decor/features/cart/screens/cart.dart';
 
 void main() => runApp(const MyApp());
 
@@ -10,13 +10,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Material App',
-      // home: SearchScreen(),
-      // home: FilterScreen(),
-      // TODO: Tasks-week-2
-      // home: CategoriesScreen(),
-      // home: SubCategory(),
-      // home: ProductScreen(),
-      home: UserReviews(),
+      home: CartScreen(),
+      // home: CartDetails(),
+      // home: CheckoutScreen(),
+      // home: ThankYou(),
+      // home: OoopsScreen(),
+      // home: TrackOrder(),
     );
   }
 }
