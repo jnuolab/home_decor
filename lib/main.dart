@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:home_decor/screens/filter.dart';
+import 'package:home_decor/screens/help_and_faqs.dart';
 
 void main() => runApp(const MyApp());
 
@@ -10,8 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Material App',
-      // home: SearchScreen(),
-      home: FilterScreen(),
+      home: HelpAndFaqs(),
     );
   }
 }
