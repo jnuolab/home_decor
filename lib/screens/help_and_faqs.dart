@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_decor/core/app_colors.dart';
+import 'package:home_decor/widgets/custom_bottom_navigation_bar.dart';
 
 class HelpAndFaqs extends StatelessWidget {
   const HelpAndFaqs({super.key});
@@ -63,6 +64,7 @@ class HelpAndFaqs extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: const CustomBottomNavigationBar(),
     );
   }
 }
