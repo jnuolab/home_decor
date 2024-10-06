@@ -30,7 +30,6 @@ class Profile extends StatelessWidget {
           ],
         ),
         actions: [
-          // TODO: change image to edit
           Image.asset('assets/images/edit.png'),
           const SizedBox(width: 20),
         ],
@@ -128,6 +127,11 @@ class Profile extends StatelessWidget {
               onPressed: () {
                 print('Hello!, I am onPressed Function');
                 // TODO: write function show dialog Are you sure you want to log out? cancel and logout
+                showModalBottomSheet(
+                    context: context,
+                    builder: (ctx) {
+                      return const Text('Are you sure you want to logs out?');
+                    });
               },
             ),
           ],
