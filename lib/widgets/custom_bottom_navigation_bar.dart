@@ -14,7 +14,6 @@ class CustomBottomNavigationBar extends StatelessWidget {
         icon: SvgPicture.asset(
           'assets/svgs/home.svg',
           width: 24,
-          // height: 24,
         ),
       ),
       BottomNavigationBarItem(
@@ -22,7 +21,6 @@ class CustomBottomNavigationBar extends StatelessWidget {
         icon: SvgPicture.asset(
           'assets/svgs/categories.svg',
           width: 24,
-          // height: 24,
         ),
       ),
       BottomNavigationBarItem(
@@ -30,7 +28,6 @@ class CustomBottomNavigationBar extends StatelessWidget {
         icon: SvgPicture.asset(
           'assets/svgs/cart.svg',
           width: 24,
-          // height: 24,
         ),
       ),
       BottomNavigationBarItem(
@@ -38,7 +35,6 @@ class CustomBottomNavigationBar extends StatelessWidget {
         icon: SvgPicture.asset(
           'assets/svgs/wishlist.svg',
           width: 24,
-          // height: 24,
         ),
       ),
       BottomNavigationBarItem(
@@ -46,7 +42,6 @@ class CustomBottomNavigationBar extends StatelessWidget {
         icon: SvgPicture.asset(
           'assets/svgs/profile.svg',
           width: 24,
-          // height: 24,
         ),
       ),
     ]);

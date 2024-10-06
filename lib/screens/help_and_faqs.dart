@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:home_decor/core/app_colors.dart';
 import 'package:home_decor/widgets/custom_bottom_navigation_bar.dart';
+import 'package:home_decor/widgets/custom_button.dart';
+import 'package:home_decor/widgets/custom_list_tile.dart';
 
 class HelpAndFaqs extends StatelessWidget {
   const HelpAndFaqs({super.key});
@@ -35,9 +37,10 @@ class HelpAndFaqs extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CustomButton(text: 'FAQ'),
+                  Expanded(child: CustomButton(text: 'FAQ')),
                   SizedBox(width: 20),
-                  CustomButton(text: 'Contact US', isActive: true),
+                  Expanded(
+                      child: CustomButton(text: 'Contact US', isActive: true)),
                 ],
               ),
               CustomListTile(
@@ -65,67 +68,6 @@ class HelpAndFaqs extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: const CustomBottomNavigationBar(),
-    );
-  }
-}
-
-class CustomListTile extends StatelessWidget {
-  final String image;
-  final String title;
-  const CustomListTile({
-    super.key,
-    required this.image,
-    required this.title,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      leading: Container(
-        padding: const EdgeInsets.all(5),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(50),
-          color: AppColors.mainColor,
-        ),
-        child: Image.asset(image),
-      ),
-      // leading: Icon(Icons.favorite),
-      title: Text(title),
-      trailing: const Icon(Icons.keyboard_arrow_down_outlined),
-    );
-  }
-}
-
-class CustomButton extends StatelessWidget {
-  final String text;
-  final bool isActive;
-  const CustomButton({
-    super.key,
-    required this.text,
-    this.isActive = false,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialButton(
-      onPressed: () {},
-      color: isActive
-          ? AppColors.mainColor.withOpacity(.8)
-          : AppColors.mainColor.withOpacity(0.5),
-      elevation: 0,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
-      ),
-      padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 30),
-      clipBehavior: Clip.none,
-      child: Text(
-        text,
-        style: TextStyle(
-          color: isActive
-              ? AppColors.mainColor
-              : AppColors.secondColor.withOpacity(0.5),
-        ),
-      ),
     );
   }
 }
