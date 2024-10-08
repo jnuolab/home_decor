@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:home_decor/features/cart/screens/cart_details.dart';
+import 'package:home_decor/features/cart/screens/checkout.dart';
+import 'package:home_decor/features/cart/screens/ooops.dart';
+import 'package:home_decor/features/cart/screens/thank_you.dart';
+import 'package:home_decor/features/cart/screens/track_order.dart';
 import 'package:home_decor/screens/categories.dart';
 import 'package:home_decor/screens/filter.dart';
 import 'package:home_decor/screens/product.dart';
@@ -24,8 +29,14 @@ class MyApp extends StatelessWidget {
       // home: CategoriesScreen(),
       // home: SubCategory(),
       // home: ProductScreen(),
-      home: UserReviews(),
+      // home: UserReviews(),
       // Tasks #3
+      // home: CartScreen(),
+      // home: CartDetails(),
+      // home: CheckoutScreen(),
+      // home: ThankYou(),
+      // home: OoopsScreen(),
+      // home: TrackOrder(),
       // Tasks #4
     );
   }
