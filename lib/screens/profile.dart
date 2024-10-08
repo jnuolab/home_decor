@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:home_decor/core/app_colors.dart';
 import 'package:home_decor/widgets/custom_button_list.dart';
@@ -125,7 +126,9 @@ class Profile extends StatelessWidget {
               title: 'Logout',
               icon: 'assets/images/logout.png',
               onPressed: () {
-                print('Hello!, I am onPressed Function');
+                if (kDebugMode) {
+                  print('Hello!, I am onPressed Function');
+                }
                 // TODO: write function show dialog Are you sure you want to log out? cancel and logout
                 showModalBottomSheet(
                     context: context,

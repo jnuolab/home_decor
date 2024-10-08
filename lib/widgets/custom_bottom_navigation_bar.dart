@@ -14,10 +14,6 @@ class CustomBottomNavigationBar extends StatelessWidget {
         icon: SvgPicture.asset(
           'assets/svgs/home.svg',
           width: 24,
-<<<<<<< HEAD
-          // height: 24,
-=======
->>>>>>> tasks-week-4
         ),
       ),
       BottomNavigationBarItem(
@@ -25,10 +21,6 @@ class CustomBottomNavigationBar extends StatelessWidget {
         icon: SvgPicture.asset(
           'assets/svgs/categories.svg',
           width: 24,
-<<<<<<< HEAD
-          // height: 24,
-=======
->>>>>>> tasks-week-4
         ),
       ),
       BottomNavigationBarItem(
@@ -36,10 +28,6 @@ class CustomBottomNavigationBar extends StatelessWidget {
         icon: SvgPicture.asset(
           'assets/svgs/cart.svg',
           width: 24,
-<<<<<<< HEAD
-          // height: 24,
-=======
->>>>>>> tasks-week-4
         ),
       ),
       BottomNavigationBarItem(
@@ -47,10 +35,6 @@ class CustomBottomNavigationBar extends StatelessWidget {
         icon: SvgPicture.asset(
           'assets/svgs/wishlist.svg',
           width: 24,
-<<<<<<< HEAD
-          // height: 24,
-=======
->>>>>>> tasks-week-4
         ),
       ),
       BottomNavigationBarItem(
@@ -58,10 +42,6 @@ class CustomBottomNavigationBar extends StatelessWidget {
         icon: SvgPicture.asset(
           'assets/svgs/profile.svg',
           width: 24,
-<<<<<<< HEAD
-          // height: 24,
-=======
->>>>>>> tasks-week-4
         ),
       ),
     ]);

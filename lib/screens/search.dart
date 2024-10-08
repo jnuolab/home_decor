@@ -68,7 +68,7 @@ class _SearchScreenState extends State<SearchScreen> {
       ),
       bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Colors.black,
-          unselectedItemColor: Color.fromRGBO(243, 182, 163, .5),
+          unselectedItemColor: const Color.fromRGBO(243, 182, 163, .5),
           items: const [
             BottomNavigationBarItem(
               label: "",
