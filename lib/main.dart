@@ -4,8 +4,12 @@ import 'package:home_decor/features/cart/screens/checkout.dart';
 import 'package:home_decor/features/cart/screens/ooops.dart';
 import 'package:home_decor/features/cart/screens/thank_you.dart';
 import 'package:home_decor/features/cart/screens/track_order.dart';
+import 'package:home_decor/screens/assistant.dart';
 import 'package:home_decor/screens/categories.dart';
+import 'package:home_decor/screens/customer_service.dart';
 import 'package:home_decor/screens/filter.dart';
+import 'package:home_decor/screens/help_and_faqs.dart';
+import 'package:home_decor/screens/help_search.dart';
 import 'package:home_decor/screens/product.dart';
 import 'package:home_decor/screens/search.dart';
 import 'package:home_decor/screens/sub_category.dart';
@@ -38,6 +42,11 @@ class MyApp extends StatelessWidget {
       // home: OoopsScreen(),
       // home: TrackOrder(),
       // Tasks #4
+      // home: HelpAndFaqs(),
+      // home: HelpSearch(),
+      // home: CustomerService(),
+      // home: Assistant(),
+      // home: Profile(),
     );
   }
 }
