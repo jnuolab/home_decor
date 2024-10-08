@@ -13,6 +13,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Material App',
+      // Tasks #1
+      // Tasks #2
+      // Tasks #3
+      // Tasks #4
+      home: FilterScreen(),
+      // home: SearchSc
       // home: CartScreen(),
       // home: CartDetails(),
       // home: CheckoutScreen(),
