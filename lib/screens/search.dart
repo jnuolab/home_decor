@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class SearchScreen extends StatefulWidget {
+  // FilterScreen
   const SearchScreen({super.key});
 
   @override
