@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:home_decor/common/app_colors.dart';
+import 'package:home_decor/screens/filter.dart';
 
 class OoopsScreen extends StatelessWidget {
   const OoopsScreen({super.key});
@@ -9,7 +11,11 @@ class OoopsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.arrow_back),
+        leading: IconButton(
+            onPressed: () {
+              Get.to(() => Get.back());
+            },
+            icon: const Icon(Icons.arrow_back)),
         title: const Text(
           'Ooops',
           style: TextStyle(
@@ -59,7 +65,9 @@ class OoopsScreen extends StatelessWidget {
           Row(
             children: [
               MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(() => const FilterScreen());
+                },
                 child: Container(
                   padding:
                       const EdgeInsets.symmetric(vertical: 15, horizontal: 40),

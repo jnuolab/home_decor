@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:home_decor/core/app_colors.dart';
+import 'package:home_decor/screens/customer_service.dart';
 import 'package:home_decor/widgets/custom_bottom_navigation_bar.dart';
 import 'package:home_decor/widgets/custom_button.dart';
 import 'package:home_decor/widgets/custom_list_tile.dart';
@@ -11,7 +13,11 @@ class HelpAndFaqs extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.arrow_back),
+        leading: IconButton(
+            onPressed: () {
+              Get.back();
+            },
+            icon: const Icon(Icons.arrow_back)),
         title: const Text(
           'Help & FAQS',
           style: TextStyle(
@@ -22,19 +28,19 @@ class HelpAndFaqs extends StatelessWidget {
           ),
         ),
       ),
-      body: const SafeArea(
+      body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              Text(
+              const Text(
                 'How Can We Help You?',
                 style: TextStyle(fontSize: 17, color: AppColors.secondColor),
               ),
-              SizedBox(height: 15),
-              Divider(color: AppColors.mainColor, height: 3),
-              SizedBox(height: 10),
-              Row(
+              const SizedBox(height: 15),
+              const Divider(color: AppColors.mainColor, height: 3),
+              const SizedBox(height: 10),
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Expanded(child: CustomButton(text: 'FAQ')),
@@ -46,20 +52,23 @@ class HelpAndFaqs extends StatelessWidget {
               CustomListTile(
                 image: 'assets/images/customer_service.png',
                 title: 'Customer Service',
+                onPressed: () => Get.to(
+                  () => const CustomerService(),
+                ),
               ),
-              CustomListTile(
+              const CustomListTile(
                 image: 'assets/images/website.png',
                 title: 'Website',
               ),
-              CustomListTile(
+              const CustomListTile(
                 image: 'assets/images/facebook.png',
                 title: 'Facebook',
               ),
-              CustomListTile(
+              const CustomListTile(
                 image: 'assets/images/whatsapp.png',
                 title: 'Whatsapp',
               ),
-              CustomListTile(
+              const CustomListTile(
                 image: 'assets/images/instagram.png',
                 title: 'Instagram',
               ),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/route_manager.dart';
 import 'package:home_decor/common/app_colors.dart';
 import 'package:home_decor/models/product.dart';
+import 'package:home_decor/screens/user_reviews.dart';
 import 'package:home_decor/widgets/custom_app_bar.dart';
 import 'package:home_decor/widgets/custom_bottom_navigation_bar.dart';
 import 'package:home_decor/widgets/custom_list_view.dart';
@@ -80,22 +82,27 @@ class ProductScreen extends StatelessWidget {
                               fontSize: 20,
                               fontFamily: 'Poppins-Bold'),
                         ),
-                        Row(
-                          children: List.generate(
-                            5,
-                            (index) {
-                              if ((5 - index) > product.rating!) {
-                                return SvgPicture.asset(
-                                  'assets/svgs/empty_star.svg',
-                                  width: 18,
-                                );
-                              } else {
-                                return SvgPicture.asset(
-                                  'assets/svgs/star.svg',
-                                  width: 18,
-                                );
-                              }
-                            },
+                        MaterialButton(
+                          onPressed: () {
+                            Get.to(() => const UserReviews());
+                          },
+                          child: Row(
+                            children: List.generate(
+                              5,
+                              (index) {
+                                if ((5 - index) > product.rating!) {
+                                  return SvgPicture.asset(
+                                    'assets/svgs/empty_star.svg',
+                                    width: 18,
+                                  );
+                                } else {
+                                  return SvgPicture.asset(
+                                    'assets/svgs/star.svg',
+                                    width: 18,
+                                  );
+                                }
+                              },
+                            ),
                           ),
                         ),
                       ],

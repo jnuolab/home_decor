@@ -1,5 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
+import 'package:home_decor/screens/categories.dart';
+import 'package:home_decor/widgets/custom_bottom_navigation_bar.dart';
 
 class SearchScreen extends StatefulWidget {
   // FilterScreen
@@ -14,7 +17,10 @@ class _SearchScreenState extends State<SearchScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.arrow_back_rounded),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_rounded),
+          onPressed: () => Get.back(),
+        ),
         title: const Text(
           'Search',
           style: TextStyle(
@@ -66,31 +72,7 @@ class _SearchScreenState extends State<SearchScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-          selectedItemColor: Colors.black,
-          unselectedItemColor: const Color.fromRGBO(243, 182, 163, .5),
-          items: const [
-            BottomNavigationBarItem(
-              label: "",
-              icon: Icon(Icons.home),
-            ),
-            BottomNavigationBarItem(
-              label: "",
-              icon: Icon(Icons.menu),
-            ),
-            BottomNavigationBarItem(
-              label: "",
-              icon: Icon(Icons.person),
-            ),
-            BottomNavigationBarItem(
-              label: "",
-              icon: Icon(Icons.catching_pokemon),
-            ),
-            BottomNavigationBarItem(
-              label: "",
-              icon: Icon(Icons.favorite),
-            ),
-          ]),
+      bottomNavigationBar: const CustomBottomNavigationBar(),
     );
   }
 }
@@ -106,16 +88,22 @@ class CustomListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
-      child: ListTile(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(35)),
-        tileColor: const Color.fromRGBO(243, 182, 163, .5),
-        leading: Container(
-            padding: const EdgeInsets.all(5),
-            decoration: BoxDecoration(
-                color: const Color.fromRGBO(243, 182, 163, 1),
-                borderRadius: BorderRadius.circular(35)),
-            child: const Icon(Icons.search_rounded)),
-        title: Text(name),
+      child: MaterialButton(
+        onPressed: () {
+          Get.to(() => const CategoriesScreen());
+        },
+        child: ListTile(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(35)),
+          tileColor: const Color.fromRGBO(243, 182, 163, .5),
+          leading: Container(
+              padding: const EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                  color: const Color.fromRGBO(243, 182, 163, 1),
+                  borderRadius: BorderRadius.circular(35)),
+              child: const Icon(Icons.search_rounded)),
+          title: Text(name),
+        ),
       ),
     );
   }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/route_manager.dart';
+import 'package:home_decor/features/cart/screens/cart_details.dart';
 
 import '../../../common/app_colors.dart';
 
@@ -10,7 +12,12 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.arrow_back),
+        leading: IconButton(
+          onPressed: () {
+            Get.back();
+          },
+          icon: const Icon(Icons.arrow_back),
+        ),
         title: const Text(
           'My Cart',
           style: TextStyle(
@@ -20,9 +27,14 @@ class CartScreen extends StatelessWidget {
           ),
         ),
         actions: [
-          SvgPicture.asset(
-            'assets/svgs/edit.svg',
-            fit: BoxFit.fill,
+          IconButton(
+            onPressed: () {
+              Get.to(() => const CartDetails());
+            },
+            icon: SvgPicture.asset(
+              'assets/svgs/edit.svg',
+              fit: BoxFit.fill,
+            ),
           ),
         ],
       ),

@@ -1,6 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:home_decor/core/app_colors.dart';
+import 'package:home_decor/screens/help_search.dart';
 import 'package:home_decor/widgets/custom_button_list.dart';
 import 'package:home_decor/widgets/custom_divider.dart';
 import 'package:home_decor/widgets/custom_divider_vertical.dart';
@@ -12,7 +14,11 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.arrow_back),
+        leading: IconButton(
+            onPressed: () {
+              Get.back();
+            },
+            icon: const Icon(Icons.arrow_back)),
         centerTitle: false,
         title: const Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -118,7 +124,10 @@ class Profile extends StatelessWidget {
               title: 'Settings',
               icon: 'assets/images/settings.png',
             ),
-            const CustomButtonList(
+            CustomButtonList(
+              onPressed: () {
+                Get.to(() => const HelpSearch());
+              },
               title: 'Help',
               icon: 'assets/images/help.png',
             ),

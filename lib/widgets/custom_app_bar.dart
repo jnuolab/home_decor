@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/route_manager.dart';
 import 'package:home_decor/common/app_colors.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -12,12 +13,11 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-        leading: SizedBox(
-          width: 20,
-          child: SvgPicture.asset(
-            'assets/svgs/arrow_back.svg',
-          ),
-        ),
+        leading: IconButton(
+            onPressed: () {
+              Get.back();
+            },
+            icon: const Icon(Icons.arrow_back)),
         title: Text(
           title,
           style: const TextStyle(

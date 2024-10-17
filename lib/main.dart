@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
+import 'package:home_decor/screens/filter.dart';
 
 void main() => runApp(const MyApp());
 
@@ -7,10 +9,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return const GetMaterialApp(
       title: 'Material App',
       // Tasks #1
-      // home: FilterScreen(),
+      home: FilterScreen(),
       // home: SearchScreen(),
       // Tasks #2
       // home: CategoriesScreen(),
@@ -25,9 +27,11 @@ class MyApp extends StatelessWidget {
       // home: OoopsScreen(),
       // home: TrackOrder(),
       // Tasks #4
+      // TODO: Not Found item to take the help page
       // home: HelpAndFaqs(),
       // home: HelpSearch(),
       // home: CustomerService(),
+      // TODO: Not Found item to take the help page
       // home: Assistant(),
       // home: Profile(),
     );

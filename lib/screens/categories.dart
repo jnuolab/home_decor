@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:home_decor/common/app_colors.dart';
+import 'package:home_decor/screens/sub_category.dart';
 import 'package:home_decor/widgets/custom_app_bar.dart';
 import 'package:home_decor/widgets/custom_bottom_navigation_bar.dart';
 
@@ -8,7 +10,6 @@ class CategoriesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // print(MediaQuery.sizeOf(context).width);
     return const Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -21,25 +22,24 @@ class CategoriesScreen extends StatelessWidget {
                 SizedBox(height: 30),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  // mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Column(
                       children: [
                         CustomContainer(
-                            width: 190, height: 86, title: 'Decorative Light'),
-                        CustomContainer(width: 190, height: 256, title: 'Beds'),
+                            width: 170, height: 66, title: 'Decorative Light'),
+                        CustomContainer(width: 170, height: 236, title: 'Beds'),
                         CustomContainer(
-                            width: 190, height: 140, title: 'Chairs'),
+                            width: 170, height: 120, title: 'Chairs'),
                       ],
                     ),
-                    SizedBox(width: 10),
+                    // SizedBox(width: 10),
                     Column(
                       children: [
-                        CustomContainer(width: 170, height: 145, title: 'Safa'),
+                        CustomContainer(width: 150, height: 105, title: 'Safa'),
                         CustomContainer(
-                            width: 170, height: 137, title: 'Tables'),
+                            width: 150, height: 117, title: 'Tables'),
                         CustomContainer(
-                            width: 170, height: 204, title: 'Cupboard'),
+                            width: 150, height: 184, title: 'Cupboard'),
                       ],
                     ),
                   ],
@@ -68,19 +68,25 @@ class CustomContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(bottom: 10),
-      width: width,
-      height: height,
-      decoration: BoxDecoration(
-        color: AppColors.mainColor,
-        borderRadius: BorderRadius.circular(15),
-      ),
-      child: Center(
-        child: Text(
-          title,
-          textAlign: TextAlign.center,
-          style: const TextStyle(fontSize: 26, color: AppColors.whiteColor),
+    return MaterialButton(
+      onPressed: () {
+        Get.to(() => SubCategory());
+      },
+      child: Container(
+        margin: const EdgeInsets.only(bottom: 20),
+        padding: const EdgeInsets.all(5),
+        width: width,
+        height: height,
+        decoration: BoxDecoration(
+          color: AppColors.mainColor,
+          borderRadius: BorderRadius.circular(15),
+        ),
+        child: Center(
+          child: Text(
+            title,
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontSize: 20, color: AppColors.whiteColor),
+          ),
         ),
       ),
     );

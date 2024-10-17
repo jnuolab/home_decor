@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:home_decor/common/app_colors.dart';
+import 'package:home_decor/features/cart/screens/thank_you.dart';
 import 'package:home_decor/features/cart/widgets/custom_card_container.dart';
 import 'package:home_decor/features/cart/widgets/custom_title.dart';
 
@@ -116,7 +117,7 @@ class CheckoutScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const CheckoutScreen(),
+                        builder: (context) => const ThankYou(),
                       ),
                     );
                   },

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/route_manager.dart';
 import 'package:home_decor/core/app_colors.dart';
+import 'package:home_decor/screens/help_and_faqs.dart';
 import 'package:home_decor/widgets/csutom_list_tile_with_divider.dart';
 import 'package:home_decor/widgets/custom_button.dart';
 import 'package:home_decor/widgets/custom_divider.dart';
@@ -13,7 +15,11 @@ class HelpSearch extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.arrow_back),
+        leading: IconButton(
+            onPressed: () {
+              Get.back();
+            },
+            icon: const Icon(Icons.arrow_back)),
         title: const Text(
           'Help & FAQS',
           style: TextStyle(
@@ -36,12 +42,17 @@ class HelpSearch extends StatelessWidget {
                   style: TextStyle(fontSize: 17, color: AppColors.secondColor),
                 ),
                 const SizedBox(height: 10),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Expanded(child: CustomButton(text: 'FAQ')),
-                    SizedBox(width: 20),
                     Expanded(
+                        child: CustomButton(
+                            onPressed: () {
+                              Get.to(() => const HelpAndFaqs());
+                            },
+                            text: 'FAQ')),
+                    const SizedBox(width: 20),
+                    const Expanded(
                         child:
                             CustomButton(text: 'Contact US', isActive: true)),
                   ],

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/route_manager.dart';
 import 'package:home_decor/common/app_colors.dart';
+import 'package:home_decor/features/cart/screens/ooops.dart';
+import 'package:home_decor/features/cart/screens/track_order.dart';
+import 'package:home_decor/screens/filter.dart';
 
 class ThankYou extends StatelessWidget {
   const ThankYou({super.key});
@@ -9,7 +13,11 @@ class ThankYou extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.arrow_back),
+        leading: IconButton(
+            onPressed: () {
+              Get.to(() => Get.back());
+            },
+            icon: const Icon(Icons.arrow_back)),
         title: const Text(
           'Thank You',
           style: TextStyle(
@@ -58,7 +66,9 @@ class ThankYou extends StatelessWidget {
           Row(
             children: [
               MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(() => const FilterScreen());
+                },
                 child: Container(
                   padding:
                       const EdgeInsets.symmetric(vertical: 15, horizontal: 40),
@@ -70,7 +80,9 @@ class ThankYou extends StatelessWidget {
                 ),
               ),
               MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(() => const TrackOrder());
+                },
                 color: AppColors.mainColor,
                 child: Container(
                   padding:

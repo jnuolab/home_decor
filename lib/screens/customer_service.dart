@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:home_decor/core/app_colors.dart';
 import 'package:home_decor/widgets/custom_divider.dart';
 import 'package:home_decor/widgets/custom_list_tile_with_subtitle.dart';
@@ -10,7 +11,11 @@ class CustomerService extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.arrow_back),
+        leading: IconButton(
+            onPressed: () {
+              Get.back();
+            },
+            icon: const Icon(Icons.arrow_back)),
         title: const Text(
           'Customer Service',
           style: TextStyle(
