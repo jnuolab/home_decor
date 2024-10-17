@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       title: 'Material App',
+      // Logic Task
       // Tasks #1
       home: FilterScreen(),
       // home: SearchScreen(),
